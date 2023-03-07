@@ -1,4 +1,5 @@
 import React from 'react';
+import Game from './tiktak.js';
 
 const Dropdown = () => {
   const [open, setOpen] = React.useState(false);
@@ -13,7 +14,7 @@ const Dropdown = () => {
       {open ? (
         <ul className="menu">
           <li className="menu-item">
-            <button>Menu1</button>
+            <Game/>
           </li>
           <li className="menu-item">
             <button>Menu1</button>

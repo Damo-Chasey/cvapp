@@ -7,6 +7,30 @@ ol, ul {
   padding-left: 30px;
 }
 
+ul.nav-bar {
+  padding-left: 0px;
+  background-color: #3D99CE;
+  text-align: center;
+}
+ul.nav-bar > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+ul.nav-bar > li:hover {
+  background-color: #2779BF;
+}
+ul.nav-bar > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+ul.records > li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+*/
+
 .board-row:after {
   clear: both;
   content: "";
