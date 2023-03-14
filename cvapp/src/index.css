@@ -1,23 +1,37 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 ol, ul {
-  padding-left: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+  
+}
+
+ul.burgerMenu > li{
+  display: inline-block;
+  
+
+  vertical-align: middle;
 }
 
 ul.nav-bar {
-  padding-left: 0px;
-  background-color: #3D99CE;
-  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #8e2929;
 }
 ul.nav-bar > li {
+  color: white;
+  font-family: 'Andale Mono, monospace';
+  font-weight: 700;
+  font-size: large;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 ul.nav-bar > li:hover {
-  background-color: #2779BF;
+  background-color: #8e2929;
 }
 ul.nav-bar > li > a {
   color: white;

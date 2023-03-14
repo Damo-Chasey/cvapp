@@ -1,5 +1,5 @@
 import React from 'react';
-import Game from './tiktak.js';
+import Navbar from './navbar.js';
 
 const Dropdown = () => {
   const [open, setOpen] = React.useState(false);
@@ -10,18 +10,18 @@ const Dropdown = () => {
 
   return(
     <div>
-    <button className="dropdownButton" onClick={handleOpen}>Dropdown</button>
-      {open ? (
-        <ul className="menu">
-          <li className="menu-item">
-            <Game/>
-          </li>
-          <li className="menu-item">
-            <button>Menu1</button>
-          </li>
-        </ul>
-      ) : null}
-    {open ? <div>Is Open</div> : <div>Is Closed</div>}
+      <ul className="burgerMenu">
+        <li>
+          <div className="dropdownButton"onClick={handleOpen}><img src={"burgor64.png"} alt={"burger menu"}/></div>
+        </li>
+        <li>
+          {open ? (
+            <Navbar/>
+          ) : null}
+        </li>
+      </ul>
+      
+
     </div>
   );
 };

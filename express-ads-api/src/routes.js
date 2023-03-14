@@ -1,6 +1,7 @@
 const express = require("express");
 const userModel = require("./models");
 const app = express();
+const fs = require('fs');
 
 app.post("/add_user", async (request, response) => {
     const user = new userModel(request.body);
@@ -14,9 +15,28 @@ app.post("/add_user", async (request, response) => {
 });
 
 app.get('/', function(req, res){
-  console.log("Website found");
+  console.log("Website contacted");
 
-  res.send("Hello! welcome to my API!");
+  res.send("Api mounted");
+  //res.sendStatus(200);
+})
+
+app.get('/placeholder', function(req, res){
+  console.log("placeholder found");
+
+  fs.readFile('content/Placeholdertext.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  //console.log(data);
+
+  res.send(data);
+});
+
+  res => 
+
+  res.send("Api mounted");
   //res.sendStatus(200);
 })
 
