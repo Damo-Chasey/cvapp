@@ -12,11 +12,11 @@ class ReactLink extends React.Component{
         .then(res => this.setState({apiResponse: res}))
     }
     
-    /*
+    
     componentWillMount() {
       this.callAPI();
     }
-    */
+    
     render(){
       return(
         <div>

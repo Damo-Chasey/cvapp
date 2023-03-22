@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './navbar.js';
+import Tabs from './tabs.js'
 
 const Dropdown = () => {
   const [open, setOpen] = React.useState(false);
@@ -16,7 +17,7 @@ const Dropdown = () => {
         </li>
         <li>
           {open ? (
-            <Navbar/>
+            <Tabs/>
           ) : null}
         </li>
       </ul>

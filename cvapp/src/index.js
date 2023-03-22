@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import ReactLink from './explnk.js';
 import Dropdown from './dropdown.js';
+import Tabs from './tabs.js'
 
+//import Planets from './planets.js';
+/*
 fetch("http://localhost:3001/placeholder")
   .then((res) => res.text())
   .then((data) => {
     const inputText = data;
   }
 );
-
+*/
 class App extends React.Component{
   
 
@@ -19,14 +22,11 @@ class App extends React.Component{
       <div style={{ backgroundImage: `url(${"backround1.png"})` }}>
         <Dropdown/>
         <ReactLink/>
-        <p>{inputText}</p>
-
-
+        <Tabs/>
       </div>
     );
   }
 }
-
 
 
 
