@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from './navbar.js';
-import Tabs from './tabs.js'
+import Tabs from './tab.js'
 
 const Dropdown = () => {
   const [open, setOpen] = React.useState(false);
