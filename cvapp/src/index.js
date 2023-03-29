@@ -20,7 +20,7 @@ class App extends React.Component{
     return(
       <div style={{ backgroundImage: `url(${"backround1.png"})` }}>
         
-        <Dropdown element={this.linkUp}/>
+        <Dropdown element={this.linkUp()}/>
         
         
       </div>
