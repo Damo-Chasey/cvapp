@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import ReactLink from './explnk.js';
 import Dropdown from './dropdown.js';
-import Tabs from './tab.js';
 
 //import Planets from './planets.js';
 /*
@@ -20,11 +19,16 @@ class App extends React.Component{
   render(){
     return(
       <div style={{ backgroundImage: `url(${"backround1.png"})` }}>
-        <Dropdown/>
-        <ReactLink/>
-        <Tabs/>
+        
+        <Dropdown element={this.linkUp}/>
+        
+        
       </div>
     );
+  }
+
+  linkUp(){
+    return(<ReactLink/>)
   }
 }
 

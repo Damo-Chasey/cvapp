@@ -1,11 +1,26 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
 }
 
 div {
   color: white;
   text-decoration: none;
+  font-family: 'Andale Mono, monospace';
 }
 
 ol, ul {
@@ -15,20 +30,28 @@ ol, ul {
   
 }
 
+div.windows {
+  padding: 10px;
+}
+div.windowsContent {
+  padding: 5px;
+  background-color: #651e1ed0;
+}
+
 ul.burgerMenu > li{
   display: inline-block;
-  
-
   vertical-align: middle;
 }
 
+div.nav-bar {
+  text-align: left;
+}
+
 ul.nav-bar {
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: #8e2929;
 }
+
 ul.nav-bar > li {
-  color: white;
   font-family: 'Andale Mono, monospace';
   font-weight: 700;
   font-size: large;
@@ -39,7 +62,6 @@ ul.nav-bar > li:hover {
   background-color: #8e2929;
 }
 ul.nav-bar > li > a {
-  color: white;
   text-decoration: none;
 }
 
@@ -91,3 +113,5 @@ ul.records > li {
 .game-info {
   margin-left: 20px;
 }
+
+

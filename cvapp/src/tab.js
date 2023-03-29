@@ -10,23 +10,31 @@ class Tabs extends React.Component {
     constructor(props){
         super(props);
         this.state = { tabs:[
-            {name: "Home", isOpen: false},
-            {name: "About", isOpen: false},
-            {name: "info", isOpen: false},
-        ]};
+            {name: "Home", isOpen: true},
+            {name: "Database", isOpen: false},
+            {name: "Info", isOpen: false},
+        ],
+        open: props.isOpen,
+        };
     }
 
     render(){
         return(
             <div>
-                <ul className="nav-bar">
-                    <li>{this.renderTab(0)}</li>
-                    <li>{this.renderTab(1)}</li>
-                    <li>{this.renderTab(2)}</li>
-                </ul>
-                {this.renderWindow(0)}
-                {this.renderWindow(1)}
-                {this.renderWindow(2)}
+                {this.props.isOpen ? (
+                    <ul className="nav-bar">
+                        <li>{this.renderTab(0)}</li>
+                        <li>{this.renderTab(1)}</li>
+                        <li>{this.renderTab(2)}</li>
+                    </ul>
+                ) : null}
+                
+                <div className="windows">
+                    {this.renderWindow(0)}
+                    {this.renderWindow(1)}
+                    {this.renderWindow(2)}
+                </div>
+                
             </div>
             
         );
@@ -63,12 +71,12 @@ class Tabs extends React.Component {
     flipValue(i){
         this.setState(prevState => {
             const newArray = [prevState.tabs];
+            for(let j = 0 ; j < 3 ; ++j){
+                newArray[0][j] = {name: newArray[0][j].name, isOpen: false};
+            }
             newArray[0][i] = {name: newArray[0][i].name, isOpen: this.boolFlip(newArray[0][i].isOpen)};
-            
-            console.log(newArray);
             return {array: newArray[0]};
         });
-
         this.render();
     }
 
@@ -80,27 +88,37 @@ class Tabs extends React.Component {
 
     window0(){
         return(
-            <div>This is a test element!</div>
+            <div className="windowsContent">This is a test element!</div>
         );
     }
 
     window1(){
         return(
-            <div>Second test element</div>
+            <div className="windowsContent">
+                <h2>Quote database</h2>
+                <p>Here you can leave a quote, if you like</p>
+            </div>
         );
     }
 
     window2(){
         return(
-            <div>Third one</div>
+            <div className="windowsContent">This is the info page</div>
         );
     }
 }
 
-
-
+export default Tabs;
 
 /*
+    closeTabs(array, length){
+        for(let i = 0 ; i < length ; ++i){
+            array[0][i] = {name: array[0][i].name, isOpen: false};
+        }
+        console.log(array);
+        return array;
+    }
+
     flipValue(i){
         this.setState(prevState => {
             console.log(prevState.tabs);
@@ -127,5 +145,3 @@ function closeTabs(){
     });
 }
 */
-
-export default Tabs;

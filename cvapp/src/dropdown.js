@@ -1,8 +1,8 @@
 import React from 'react';
 import Tabs from './tab.js'
 
-const Dropdown = () => {
-  const [open, setOpen] = React.useState(false);
+const Dropdown = (props) => {
+  const [open, setOpen] = React.useState(true);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -15,13 +15,14 @@ const Dropdown = () => {
           <div className="dropdownButton"onClick={handleOpen}><img src={"burgor64.png"} alt={"burger menu"}/></div>
         </li>
         <li>
-          {open ? (
-            <Tabs/>
-          ) : null}
+          <h2>Damo's website</h2>
+          {props.element}
         </li>
       </ul>
-      
 
+      <div className="nav-bar">
+        <Tabs isOpen={open}/>
+      </div>
     </div>
   );
 };
