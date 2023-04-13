@@ -30,6 +30,18 @@ ol, ul {
   
 }
 
+div.dataInput {
+  background-color:#3b0d0d;
+  padding: 5px;
+}
+div.dataInput > form{
+  padding: 5px;
+}
+div.dataInput > form > label {
+  display: block;
+  padding: 5px;
+}
+
 div.windows {
   padding: 10px;
 }

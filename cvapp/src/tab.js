@@ -1,4 +1,5 @@
 import React from 'react';
+import Window1 from './window1.js';
 
 function Tab(props) {
     return(
@@ -94,10 +95,7 @@ class Tabs extends React.Component {
 
     window1(){
         return(
-            <div className="windowsContent">
-                <h2>Quote database</h2>
-                <p>Here you can leave a quote, if you like</p>
-            </div>
+            <Window1/>
         );
     }
 
