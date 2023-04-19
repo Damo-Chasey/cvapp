@@ -1,4 +1,5 @@
 import React from 'react';
+import Backlink from './backlink.js';
 
 class Window1 extends React.Component{
     constructor (props) {
@@ -31,8 +32,9 @@ class Window1 extends React.Component{
         return(
             <div className="windowsContent">
                 <div>
-                    <h2>Quote database</h2>
-                    <p>Here you can leave a quote, if you like</p>
+                    <h2>Colour database</h2>
+                    <p>Leave an alias and your favourite colour!</p>
+                    <p>This database fetches data through an express api into a mongo DataBase</p>
                 </div>
                 
                 <div className="dataInput">
@@ -52,7 +54,7 @@ class Window1 extends React.Component{
                             <tr>
                                 <td>
                                 <label>
-                                    Message:
+                                    Colour:
                             
                                     </label>
                                 </td>
@@ -69,7 +71,11 @@ class Window1 extends React.Component{
                         </table>
                         
                     </form>
+
+                    
                 </div>
+
+                <Backlink/>
                 
             </div>
         )

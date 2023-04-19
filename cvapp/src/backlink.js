@@ -15,9 +15,14 @@ function Backlink() {
 
     return(
         <div>
-            {name.map((data) => (<p> {data.name} </p>))}
-            
-            
+            <table>
+                <tbody>
+                    {name.map((data) => (<tr key={data.id}>
+                        <td>{data.name}</td>
+                        <td>{data.colour}</td>
+                    </tr>))}
+                </tbody>
+            </table>
         </div>
     );
 };
