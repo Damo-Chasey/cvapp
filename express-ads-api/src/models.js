@@ -5,9 +5,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
-    default: 0,
+  colour: {
+    type: String,
+    required: true,
   },
 });
 

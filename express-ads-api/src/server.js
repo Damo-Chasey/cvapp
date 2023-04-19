@@ -14,6 +14,16 @@ mongoose.connect('mongodb+srv://Damo:boxofrocks@cluster0.rixw3hn.mongodb.net/?re
   }
 );
 
+/*
+var Schema = mongoose.Schema;
+var userSchema = new Schema({
+  alias: String,
+  message: String,
+}, {collection: 'quote-data'});
+
+var quoteData = mongoose.model('QuoteData', userSchema);
+*/
+
 const db = mongoose.connection;
     db.on("error", console.error.bind(console, "connection error: "));
     db.once("open", function () {
