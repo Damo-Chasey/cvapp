@@ -17,13 +17,32 @@ function Backlink() {
         <div>
             <table>
                 <tbody>
-                    {name.map((data) => (<tr key={data.id}>
+                    {name.map((data) => (<tr key={data._id}>
                         <td>{data.name}</td>
                         <td>{data.colour}</td>
                     </tr>))}
                 </tbody>
             </table>
         </div>
+    );
+};
+
+export function InsertColour(props) {
+    console.log("Attempting database insert");
+    
+    useEffect(() => {
+        const request= {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({name: "John",colour: "Blue"})
+        };
+        fetch('http://localhost:3001/add_user', request)
+            .then(response => response.json())
+            
+    }, [])
+
+    return(
+        <div> </div>
     );
 };
 

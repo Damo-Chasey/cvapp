@@ -1,5 +1,6 @@
 import React from 'react';
 import Backlink from './backlink.js';
+import InsertColour from './backlink.js';
 
 class Window1 extends React.Component{
     constructor (props) {
@@ -64,7 +65,7 @@ class Window1 extends React.Component{
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="submit" name="Submit"/>
+                                    <input type="submit" name="Submit"/><InsertColour/>
                                 </td> 
                             </tr>
                             </tbody>

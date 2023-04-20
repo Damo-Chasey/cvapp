@@ -5,7 +5,6 @@ import ReactLink from './explnk.js';
 import Dropdown from './dropdown.js';
 
 
-
 class App extends React.Component{
   
 
@@ -15,7 +14,6 @@ class App extends React.Component{
         
         <Dropdown element={this.linkUp()}/>
         
-       
       </div>
     );
   }
