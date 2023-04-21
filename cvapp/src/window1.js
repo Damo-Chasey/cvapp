@@ -1,6 +1,6 @@
+//import React from 'react';
+import {Backlink} from './backlink.js';
 import React from 'react';
-import Backlink from './backlink.js';
-import InsertColour from './backlink.js';
 
 class Window1 extends React.Component{
     constructor (props) {
@@ -8,6 +8,7 @@ class Window1 extends React.Component{
         this.state = {
             value: ``,
             message: ``,
+            listMounted: true,
         };
 
         this.handleMessageChange = this.handleMessageChange.bind(this);
@@ -23,10 +24,25 @@ class Window1 extends React.Component{
         this.setState({message: event.target.value});
     }
 
-    handleSubmit(event){
+    async handleSubmit(event){
         console.log(this.state.value);
         console.log(this.state.message);
         event.preventDefault();
+        
+        this.setState({listMounted: false}); //Forces component to re-render
+
+        let request = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify({name: this.state.value,colour: this.state.message})
+        };
+        let res = await fetch('http://localhost:3001/add_user', request)
+        
+
+        let resJson = await res.json();
+        console.log(resJson);
+        
+        this.setState({listMounted: true}); //Other half of Re-Render
     }
 
     render() {
@@ -54,7 +70,7 @@ class Window1 extends React.Component{
                             </tr>
                             <tr>
                                 <td>
-                                <label>
+                                    <label>
                                     Colour:
                             
                                     </label>
@@ -65,7 +81,7 @@ class Window1 extends React.Component{
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="submit" name="Submit"/><InsertColour/>
+                                    <input type="submit" name="Submit"/>
                                 </td> 
                             </tr>
                             </tbody>
@@ -76,7 +92,7 @@ class Window1 extends React.Component{
                     
                 </div>
 
-                <Backlink/>
+                {this.state.listMounted === true ? <Backlink/> : null}
                 
             </div>
         )

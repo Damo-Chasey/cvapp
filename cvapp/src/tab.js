@@ -107,39 +107,3 @@ class Tabs extends React.Component {
 }
 
 export default Tabs;
-
-/*
-    closeTabs(array, length){
-        for(let i = 0 ; i < length ; ++i){
-            array[0][i] = {name: array[0][i].name, isOpen: false};
-        }
-        console.log(array);
-        return array;
-    }
-
-    flipValue(i){
-        this.setState(prevState => {
-            console.log(prevState.tabs);
-            const newArray = [prevState.tabs];
-            newArray[0][i] = {name: "Home", isOpen: true};
-            
-            console.log(newArray);
-            return {array: newArray[0]};
-        });
-
-        this.render();
-    }
-
-    this.state.tabs[i].isOpen === true ? this.setState({tabs }) false : this.state.tabs[i].isOpen = true;
-
-    <Tab onClick={handleOpen(this.props.tabs[i])} name={this.props.tabs[i]}/>
-*/
-
-
-/*
-function closeTabs(){
-    this.state.tabs.array.forEach(element => {
-        flipValue(element.isOpen);
-    });
-}
-*/

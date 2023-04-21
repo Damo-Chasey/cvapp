@@ -1,20 +1,22 @@
 import React, {useState, useEffect} from 'react';
 
-function Backlink() {
+export function Backlink() {
     const [name, setName] = useState([]);
-    
+
     useEffect(() => {
         names()
     }, [])
 
     const names = async () => {
         const response = await fetch('http://localhost:3001/users');
+        console.log("Fetched entries");
 
         setName(await response.json());
     }
 
     return(
         <div>
+            {console.log("Displaying entries")}
             <table>
                 <tbody>
                     {name.map((data) => (<tr key={data._id}>
@@ -27,23 +29,3 @@ function Backlink() {
     );
 };
 
-export function InsertColour(props) {
-    console.log("Attempting database insert");
-    
-    useEffect(() => {
-        const request= {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify({name: "John",colour: "Blue"})
-        };
-        fetch('http://localhost:3001/add_user', request)
-            .then(response => response.json())
-            
-    }, [])
-
-    return(
-        <div> </div>
-    );
-};
-
-export default Backlink;
