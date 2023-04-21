@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-export function Backlink() {
+export function ShowData() {
     const [name, setName] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export function Backlink() {
     }
 
     return(
-        <div>
+        <div className={"showData"}>
             {console.log("Displaying entries")}
             <table>
                 <tbody>

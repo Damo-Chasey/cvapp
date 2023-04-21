@@ -1,5 +1,5 @@
 //import React from 'react';
-import {Backlink} from './backlink.js';
+import {ShowData} from './showdata.js';
 import React from 'react';
 
 class Window1 extends React.Component{
@@ -92,7 +92,7 @@ class Window1 extends React.Component{
                     
                 </div>
 
-                {this.state.listMounted === true ? <Backlink/> : null}
+                {this.state.listMounted === true ? <ShowData/> : null}
                 
             </div>
         )
