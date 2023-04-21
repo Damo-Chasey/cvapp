@@ -17,14 +17,15 @@ export function ShowData() {
     return(
         <div className={"showData"}>
             {console.log("Displaying entries")}
-            <table>
-                <tbody>
-                    {name.map((data) => (<tr key={data._id}>
-                        <td>{data.name}</td>
-                        <td>{data.colour}</td>
-                    </tr>))}
-                </tbody>
-            </table>
+            
+                {name.map((data) => (
+                    <div key={data._id}>
+                        <li>
+                            {data.name} {data.colour}
+                        </li>
+                    </div>
+                ))}
+            
         </div>
     );
 };

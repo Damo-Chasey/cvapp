@@ -51,7 +51,7 @@ class Window1 extends React.Component{
                 <div>
                     <h2>Colour database</h2>
                     <p>Leave an alias and your favourite colour!</p>
-                    <p>This database fetches data through an express api into a mongo DataBase</p>
+                    <p>This database fetches data through an express api and into a mongo database</p>
                 </div>
                 
                 <div className="dataInput">

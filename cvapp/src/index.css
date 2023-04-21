@@ -15,6 +15,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+  list-style-type: none;
 }
 
 div {
@@ -27,14 +28,14 @@ ol, ul {
   margin: 0;
   padding: 0;
   list-style-type:none;
-  
 }
 
 div.dataInput {
-  
   padding: 5px;
 }
 div.dataInput > form{
+  align-items: center;
+  border-radius: 10px;
   background-color:#3b0d0d;
   padding: 5px;
 }
@@ -43,21 +44,30 @@ div.dataInput > form > label {
   padding: 5px;
 }
 
-div.showData {
-  padding: 5px;
-}
 
-div.showData > table > tbody > tr > td{
+div.showData{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+div.showData > div{
+  padding: 3px;
+}
+div.showData > div > li{
+  border-radius: 10px;
+  width: 100px;
   padding: 5px;
   background-color: #3b0d0d;
 }
 
 div.windows {
   padding: 10px;
+  min-width: 250px;
 }
 div.windowsContent {
+  border-radius: 10px;
   padding: 5px;
   background-color: #651e1ed0;
+  
 }
 
 ul.burgerMenu > li{
@@ -76,14 +86,15 @@ ul.nav-bar {
 ul.nav-bar > li {
   font-family: 'Andale Mono, monospace';
   font-weight: 700;
-  font-size: large;
+  font-size: xx-large;
   display: inline-block;
   padding: 5px 10px;
 }
 ul.nav-bar > li:hover {
-  background-color: #8e2929;
+  background-color: #da7171;
+  cursor: pointer;
 }
-ul.nav-bar > li > a {
+ul.nav-bar > li > p {
   text-decoration: none;
 }
 

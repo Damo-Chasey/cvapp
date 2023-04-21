@@ -3,7 +3,7 @@ import Window1 from './window1.js';
 
 function Tab(props) {
     return(
-        <button onClick={props.onClick}>{props.name}</button>
+        <p onClick={props.onClick}>{props.name}</p>
     );
 }
 
