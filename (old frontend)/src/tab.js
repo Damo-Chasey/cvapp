@@ -24,10 +24,10 @@ class Tabs extends React.Component {
         return(
             <div>
                 {this.props.isOpen ? (
-                    <ul className="nav nav-tabs">
-                        <li><p class="nav-link">{this.renderTab(0)}</p></li>
-                        <li><p class="nav-link">{this.renderTab(1)}</p></li>
-                        <li><p class="nav-link">{this.renderTab(2)}</p></li>
+                    <ul className="nav-bar">
+                        <li>{this.renderTab(0)}</li>
+                        <li>{this.renderTab(1)}</li>
+                        <li>{this.renderTab(2)}</li>
                     </ul>
                 ) : null}
                 

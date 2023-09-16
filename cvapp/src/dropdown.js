@@ -10,19 +10,12 @@ const Dropdown = (props) => {
 
   return(
     <div>
-      <ul className="burgerMenu">
-        <li>
-          <div className="dropdownButton"onClick={handleOpen}><img src={"burgor64.png"} alt={"burger menu"}/></div>
-        </li>
-        <li>
-          <h2>Damo's website</h2>
-          {props.element}
-        </li>
+      <ul>
+        <div onClick={handleOpen}><p>Show/Hide menu</p></div>
       </ul>
-
-      <div className="nav-bar">
+      <ul class="nav">
         <Tabs isOpen={open}/>
-      </div>
+      </ul>
     </div>
   );
 };
