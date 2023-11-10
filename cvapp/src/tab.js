@@ -1,10 +1,11 @@
 import React from 'react';
-import Window1 from './window1.js';
+import DBWindow from './dbwindow.js';
 import Info from './info.js';
+import Homepage from './homepage.js'
 
 function Tab(props) {
     return(
-        <p onClick={props.onClick}>{props.name}</p>
+        <p className="nav-link" onClick={props.onClick}>{props.name}</p>
     );
 }
 
@@ -14,7 +15,7 @@ class Tabs extends React.Component {
         this.state = { tabs:[
             {name: "Home", isOpen: true},
             {name: "Database", isOpen: false},
-            {name: "Info", isOpen: false},
+            {name: "Resume", isOpen: false},
         ],
         open: props.isOpen,
         };
@@ -24,10 +25,10 @@ class Tabs extends React.Component {
         return(
             <div>
                 {this.props.isOpen ? (
-                    <ul className="nav nav-tabs">
-                        <li><p class="nav-link">{this.renderTab(0)}</p></li>
-                        <li><p class="nav-link">{this.renderTab(1)}</p></li>
-                        <li><p class="nav-link">{this.renderTab(2)}</p></li>
+                    <ul className="nav-tabs">
+                        <li>{this.renderTab(0)}</li>
+                        <li>{this.renderTab(1)}</li>
+                        <li>{this.renderTab(2)}</li>
                     </ul>
                 ) : null}
                 
@@ -90,13 +91,13 @@ class Tabs extends React.Component {
 
     window0(){
         return(
-            <div className="windowsContent">This is a test element!</div>
+            <Homepage/>
         );
     }
 
     window1(){
         return(
-            <Window1/>
+            <DBWindow/>
         );
     }
 

@@ -25,15 +25,3 @@ app.use(Router);
 app.listen(3001, () => {
   console.log("Server is running at port 3001");
 });
-
-
-
-/*
-var Schema = mongoose.Schema;
-var userSchema = new Schema({
-  alias: String,
-  message: String,
-}, {collection: 'quote-data'});
-
-var quoteData = mongoose.model('QuoteData', userSchema);
-*/

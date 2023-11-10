@@ -16,10 +16,15 @@ time, mark, audio, video {
 	border: 0;
 	vertical-align: baseline;
   list-style-type: none;
+
+  text-align: center;
+}
+
+header, body {
+  background-color:#dee1e3;
 }
 
 div {
-  color: white;
   text-decoration: none;
   font-family: 'Andale Mono, monospace';
 }
@@ -35,7 +40,7 @@ div.dataInput {
 }
 div.dataInput > form{
   border-radius: 10px;
-  background-color:#3b0d0d;
+  background-color:#0d173b;
   padding: 5px;
 }
 div.dataInput > form > label {
@@ -55,7 +60,7 @@ div.showData > div > li{
   border-radius: 10px;
   width: 100px;
   padding: 5px;
-  background-color: #3b0d0d;
+  background-color: #0d183b;
 }
 
 div.windows {
@@ -63,87 +68,40 @@ div.windows {
   min-width: 250px;
 }
 div.windowsContent {
+  color: #dee1e3;
   border-radius: 10px;
   padding: 5px;
-  background-color: #651e1ed0;
+  background-color: #1e3665d0;
   
 }
 
-ul.burgerMenu > li{
-  display: inline-block;
-  vertical-align: middle;
+
+ul.nav {
+  color: Black;
 }
 
-div.nav-bar {
-  text-align: left;
+ul.nav-tabs {
+  display:flex;
+  justify-content: center;
+  background-color: #1e3665d0;
+  padding-block: 10px;
+  color: #dee1e3;
 }
 
-ul.nav-bar {
-  background-color: #8e2929;
+p.nav-link {
+  padding-inline: 15px;
+  font-size: large;
 }
 
-ul.nav-bar > li {
-  font-family: 'Andale Mono, monospace';
-  font-weight: 700;
-  font-size: xx-large;
-  display: inline-block;
-  padding: 5px 10px;
-}
-ul.nav-bar > li:hover {
-  background-color: #da7171;
-  cursor: pointer;
-}
-ul.nav-bar > li > p {
-  text-decoration: none;
+table {
+  width:100%;
+
 }
 
-/*
-ul.records > li {
-  display: inline-block;
-  padding: 10px 20px;
-}
-*/
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+tr {
+  width:100%;
 }
 
-.status {
-  margin-bottom: 10px;
+td {
+  padding: 3px;
 }
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-}
-
-

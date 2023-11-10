@@ -11,10 +11,12 @@ const Dropdown = (props) => {
   return(
     <div>
       <ul>
-        <div onClick={handleOpen}><p>Show/Hide menu</p></div>
+        <div onClick={handleOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
       </ul>
-      <ul class="nav">
-        <Tabs isOpen={open}/>
+      <ul>
+        <div>
+          <Tabs isOpen={open}/>
+        </div>
       </ul>
     </div>
   );
