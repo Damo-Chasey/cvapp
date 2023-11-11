@@ -47,55 +47,58 @@ class DBWindow extends React.Component{
 
     render() {
         return(
-            <div className="windowsContent">
+            <div>
+                <div className="windowsContent">
+                    <div>
+                        <h2>Colour database</h2>
+                        <p>Leave an alias and your favourite colour! or just write something silly</p>
+                        <p>This database fetches data through an express api and into a mongo database</p>
+                    </div>
+
+                    <div className="dataInput">
+                        <form onSubmit={this.handleSubmit}>
+                            <table>
+                                <tbody>
+                                    <td></td>
+                                    <td width={"200px"}>  
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    Alias:
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" value={this.state.value} onChange={this.handleChange} name="Alias"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                Colour:
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" value={this.state.message} onChange={this.handleMessageChange} name="Message"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="submit" name="Submit"/>
+                                            </td>
+                                        </tr>
+
+                                    </td><td>
+
+                                    </td>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    {this.state.listMounted === true ? <ShowData/> : null}
+                </div>
                 <div>
-                    <h2>Colour database</h2>
-                    <p>Leave an alias and your favourite colour! or just write something silly</p>
-                    <p>This database fetches data through an express api and into a mongo database</p>
+                    
                 </div>
-
-                <div className="dataInput">
-                    <form onSubmit={this.handleSubmit}>
-                        <table>
-                            <tbody>
-                                <td></td>
-                                <td width={"200px"}>  
-                                    <tr>
-                                        <td>
-                                            <label>
-                                                Alias:
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <input type="text" value={this.state.value} onChange={this.handleChange} name="Alias"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label>
-                                            Colour:
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <input type="text" value={this.state.message} onChange={this.handleMessageChange} name="Message"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <input type="submit" name="Submit"/>
-                                        </td>
-                                    </tr>
-
-                                </td><td>
-                                    
-                                </td>
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
-
-                {this.state.listMounted === true ? <ShowData/> : null}
-
             </div>
         )
     };
