@@ -1,6 +1,7 @@
 //import React from 'react';
 import {ShowData} from './showdata.js';
 import React from 'react';
+import BarChart from './barchart.js'
 
 class DBWindow extends React.Component{
     constructor (props) {
@@ -82,11 +83,10 @@ class DBWindow extends React.Component{
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 <input type="submit" name="Submit"/>
                                             </td>
                                         </tr>
-
                                     </td><td>
 
                                     </td>
@@ -96,9 +96,11 @@ class DBWindow extends React.Component{
                     </div>
                     {this.state.listMounted === true ? <ShowData/> : null}
                 </div>
-                <div>
-                    
-                </div>
+                <td></td>
+                <td style={{width:"500px"}}>
+                    <BarChart/>
+                </td>
+                <td></td>
             </div>
         )
     };
