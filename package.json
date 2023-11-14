@@ -1,6 +1,6 @@
 {
     "scripts": {
-      "heroku-prebuild": "cd cvapp && npm install && npm start && cd .. && cd express-ads-api && npm install",
-      "start": "cd api && npm run devStart"
+      "heroku-prebuild": "cd cvapp && npm install && npm build && cd .. && cd express-ads-api && npm install",
+      "start": "cd express-ads-api && npm run devStart && cd .. && cd cvapp && npm start"
     }
 }

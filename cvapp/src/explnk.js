@@ -7,7 +7,7 @@ class ReactLink extends React.Component{
     }
   
     callAPI(){
-      fetch("http://localhost:3001/")
+      fetch("https://desolate-eyrie-13469-959621a3e284.herokuapp.com/")
         .then(res => res.text())
         .then(res => this.setState({apiResponse: res}))
 
