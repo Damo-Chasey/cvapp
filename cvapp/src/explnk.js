@@ -7,12 +7,12 @@ class ReactLink extends React.Component{
     }
   
     callAPI(){
-      fetch("http://localhost:3001")
+      fetch("http://13.239.20.181:3001/")
         .then(res => res.text())
         .then(res => this.setState({apiResponse: res}))
 
       if (this.state.apiResponse === ""){
-        this.setState({apiResponse: "Failed to mount API, this may be due to AWS migration"})
+        this.setState({apiResponse: "Failed to mount API, this may be due to AWS migration, try: http://54.206.75.134:3000/"})
       }
     }
     
